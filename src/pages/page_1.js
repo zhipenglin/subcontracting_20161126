@@ -9,6 +9,6 @@ export default function(){
     return new Promise((resolve)=>{
         setTimeout(()=>{
             resolve();
-        },2000);
+        },3000);
     });
 }

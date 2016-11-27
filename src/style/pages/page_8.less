@@ -4,6 +4,8 @@
   background: #0d3757;
   color:#fff;
   .slider-list{
+    opacity: 0;
+    transition: opacity 1s 2s;
     .position(105px,130px);
     width: 330px;
     border: dashed 1px rgba(255,255,255,0.5);
@@ -35,7 +37,7 @@
         top: 0;
         height: 15px;
         width: 0;
-        transition: width 2s;
+        transition: width 2s 3s;
       }
       .num{
         position: absolute;
@@ -44,6 +46,9 @@
         top:-5px;
       }
     }
+  }
+  &.active .slider-list{
+    opacity: 1;
   }
   &.active .result{
     opacity: 1;
@@ -55,7 +60,7 @@
     text-align: center;
     border-radius: 50%;
     opacity: 0;
-    transition: opacity 1s 500ms;
+    transition: opacity 1s 3s;
     .position(110px,310px);
     .title{
       margin-top: 20px;
@@ -72,6 +77,8 @@
     }
   }
   .footer{
+    opacity: 0;
+    transition: opacity 1s 1s;
     .position(146px,650px);
     width: 240px;
     text-align: center;
@@ -87,7 +94,14 @@
       color:#ec5a49;
     }
   }
+  &.active{
+    .footer,.logo{
+      opacity:1;
+    }
+  }
   .logo{
+    opacity: 0;
+    transition: opacity 1s 1s;
     .position(0,780px);
     &:before{
       content: '';

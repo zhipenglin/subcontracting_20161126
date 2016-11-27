@@ -28,10 +28,10 @@ export default function(){
             resolve();
         });
         setTimeout(()=>{
-            page.find('.clock').addClass('c-0');
+            page.find('.clock').hide().addClass('c-0').fadeIn();
         },1500);
         setTimeout(()=>{
-            page.find('.clock').removeClass('c-0').addClass('c-1');
+            page.find('.clock').removeClass('c-0').hide().addClass('c-1').fadeIn();
         },2500);
     });
 }

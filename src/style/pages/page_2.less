@@ -10,10 +10,10 @@
       font-size: 80px;
       .position(110px,10px);
     }
-    transform: translateX(200%);
+    transform: translateX(300%);
   }
   &.active .title{
-    animation: left 1s forwards;
+    animation: left 1s 3s forwards;
   }
   &.active .clock{
     animation: scale-fade-big-in 1s 1s forwards;
@@ -39,6 +39,10 @@
       text-align: right;
       font-weight: bold;
     }
+    &:before{
+      opacity: 0;
+      transition: opacity 1s;
+    }
     &.c-0{
       &:before{
         content:'';
@@ -60,12 +64,21 @@
       }
     }
   }
+  &.active{
+    .clicker,.footer{
+      opacity: 1;
+    }
+  }
   .clicker{
+    opacity: 0;
+    transition: opacity 1s 4s;
     .bg(url('../../images/page_2_clicker.png'),100px,100px);
     .position(210px,640px);
     animation: scale-rotate-in 1s infinite ease-in-out;
   }
   .footer{
+    opacity: 0;
+    transition: opacity 1s 4s;
     color:#fff;
     .position(200px,740px);
     line-height: 1.4;
