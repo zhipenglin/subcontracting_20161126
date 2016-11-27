@@ -1,0 +1,126 @@
+@import "../common";
+
+.page.page-7{
+  background: #6dbdc4;
+  .chart{
+    .bg(url('../../images/page_7_chart.png'),440px,485px);
+    .position(45px,130px);
+    &:after{
+      content:'';
+      display: block;
+      position: absolute;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      width: 216px;
+      height: 216px;
+      background-size: 216px 216px;
+      animation: chart 2s infinite;
+    }
+    @keyframes chart {
+      0%{
+        opacity: 1;
+        background-image: url('../../images/chart_1.png');
+      }
+      10%{
+        opacity: 0.4;
+        background-image: url('../../images/chart_1.png');
+      }
+      20%{
+        opacity: 1;
+        background-image: url('../../images/chart_2.png');
+      }
+      30%{
+        opacity: 0.4;
+        background-image: url('../../images/chart_2.png');
+      }
+      40%{
+        opacity: 1;
+        background-image: url('../../images/chart_3.png');
+      }
+      50%{
+        opacity: 0.4;
+        background-image: url('../../images/chart_3.png');
+      }
+      60%{
+        opacity: 1;
+        background-image: url('../../images/chart_4.png');
+      }
+      70%{
+        opacity: 0.4;
+        background-image: url('../../images/chart_4.png');
+      }
+      80%{
+        opacity: 1;
+        background-image: url('../../images/chart_5.png');
+      }
+      80%{
+        opacity: 0.4;
+        background-image: url('../../images/chart_5.png');
+      }
+      100%{
+        opacity: 1;
+        background-image: url('../../images/chart_1.png');
+      }
+    }
+  }
+  .loading{
+    color:#000;
+    .position(50%,720px);
+    transform: translateX(-50%);
+    &:before,&:after{
+      width: 140px;
+      display: block;
+      text-align: center;
+    }
+    &:before{
+      content:'准备好了吗';
+      .position(-30px,40px);
+      font-size: 24px;
+    }
+    &:after{
+      content:'接受现实吧...';
+      .position(-30px,70px);
+    }
+    i{
+      &:before,&:after{
+        transform: translateX(4px);
+        float: left;
+        content:'';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #fff;
+        margin: 10px 5px;
+        opacity: 0;
+      }
+      &:first-child{
+        &:before{
+          background: #5f99a4;
+          animation: fade-in 300ms infinite;
+        }
+        &:after{
+          background: #c3e4e4;
+          animation: fade-in 300ms 500ms infinite;
+        }
+      }
+      &:last-child{
+        &:before{
+          background: #ec5a49;
+          animation: fade-in 300ms 1000ms infinite;
+        }
+        &:after{
+          background: #d25649;
+          animation: fade-in 300ms 1500ms infinite;
+        }
+      }
+    }
+  }
+  &:before{
+    content:'';
+    display: block;
+    .position(0,0);
+    .bg(url('../../images/page_7_bg.png'),532px,946px);
+  }
+}

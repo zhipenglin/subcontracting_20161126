@@ -1,0 +1,109 @@
+@import "../common";
+
+.page.page-8{
+  background: #0d3757;
+  color:#fff;
+  .slider-list{
+    .position(105px,130px);
+    width: 330px;
+    border: dashed 1px rgba(255,255,255,0.5);
+    box-sizing: border-box;
+    padding: 20px;
+    .red{
+      color:#ec5a49;
+      .slider-inner{
+        background: #ec5a49;
+      }
+    }
+    .blue{
+      color:#6dbdc4;
+      .slider-inner{
+        background: #6dbdc4;
+      }
+    }
+    .slider{
+      height: 15px;
+      background: #4c4b4b;
+      border-radius: 2em;
+      margin: 10px 0;
+      position: relative;
+      width: 80%;
+      .slider-inner{
+        position: absolute;
+        border-radius: 2em;
+        left: 0;
+        top: 0;
+        height: 15px;
+        width: 0;
+        transition: width 2s;
+      }
+      .num{
+        position: absolute;
+        right: -60px;
+        font-size: 28px;
+        top:-5px;
+      }
+    }
+  }
+  &.active .result{
+    opacity: 1;
+  }
+  .result{
+    width: 320px;
+    height: 320px;
+    background: rgba(85,153,166,0.4);
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 1s 500ms;
+    .position(110px,310px);
+    .title{
+      margin-top: 20px;
+      padding:20px 0;
+      .time{
+        color:#ec5a49;
+        font-size: 30px;
+      }
+    }
+    p{
+      padding:6px 0;
+      font-size: 23px;
+      opacity: 0.9;
+    }
+  }
+  .footer{
+    .position(146px,650px);
+    width: 240px;
+    text-align: center;
+    .clicker{
+      background: #ec5a49;
+      width: 120px;
+      height: 40px;
+      line-height: 40px;
+      margin: 20px auto;
+      border-radius: 1em;
+    }
+    p{
+      color:#ec5a49;
+    }
+  }
+  .logo{
+    .position(0,780px);
+    &:before{
+      content: '';
+      .position(190px,0);
+      .bg(url('../../images/page_8_logo.png'),136px,30px);
+    }
+    &:after{
+      content: '';
+      .position(420px,40px);
+      .bg(url('../../images/page_8_footer.png'),82px,7px);
+    }
+  }
+  &:before{
+    content:'';
+    display: block;
+    .position(0,0);
+    .bg(url('../../images/page_8_bg.png'),532px,946px);
+  }
+}

@@ -1,0 +1,33 @@
+@import "../common";
+
+.page.page-4{
+  background: #6dbdc4;
+  .balloon{
+    width: 100%;
+    height: 620px;
+    .position(0,0);
+    opacity: 0;
+    animation: fade-in 1000ms 300ms forwards;
+  }
+  &.active .title{
+    animation: left 2s forwards;
+  }
+  .title{
+    transform: translateX(200%);
+    .bg(url('../../images/page_4_title.png'),291px,80px);
+    .position(120px,670px);
+  }
+  .next-btn{
+    border:solid 1px #20526d;
+    color:#20526d;
+  }
+  .bottom-slider .tips{
+    color:#fff;
+  }
+  &:before{
+    content:'';
+    display: block;
+    .position(0,0);
+    .bg(url('../../images/page_4_bg.png'),532px,946px)
+  }
+}

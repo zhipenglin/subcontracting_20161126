@@ -1,0 +1,72 @@
+@import "../common";
+
+.page.page-1{
+  .clock{
+    .bg(url('../../images/clock.png'),459px,739px);
+    .position(70px,170px);
+    &:before{
+      content:'';
+      display: block;
+      .bg(url('../../images/2016.png'),106px,60px);
+      .position(140px,100px);
+      animation: scale-fade-in 1000ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    &:after{
+      content:'';
+      display: block;
+      .bg(url('../../images/colock.gif'),450px,450px);
+      .position(-30px,-25px);
+      transform: scale(0.5);
+    }
+  }
+  .loading{
+    color:#fff;
+    .position(50%,720px);
+    transform: translateX(-50%);
+    &:before{
+      content:'loading...';
+      display: block;
+    }
+    i{
+      &:before,&:after{
+        transform: translateX(4px);
+        float: left;
+        content:'';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #fff;
+        margin: 10px 5px;
+        opacity: 0;
+      }
+      &:first-child{
+        &:before{
+          background: #5f99a4;
+          animation: fade-in 300ms infinite;
+        }
+        &:after{
+          background: #c3e4e4;
+          animation: fade-in 300ms 500ms infinite;
+        }
+      }
+      &:last-child{
+        &:before{
+          background: #ec5a49;
+          animation: fade-in 300ms 1000ms infinite;
+        }
+        &:after{
+          background: #d25649;
+          animation: fade-in 300ms 1500ms infinite;
+        }
+      }
+    }
+  }
+  background: #0d3757;
+  &:before{
+    content:'';
+    display: block;
+    .position(0,0);
+    .bg(url('../../images/bg_page_1_1.png'),532px,946px);
+  }
+}

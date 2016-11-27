@@ -1,0 +1,83 @@
+@import "../common";
+
+.page.page-2{
+  background: #6dbdc4;
+  .title{
+    .bg(url('../../images/page_2_title.png'),264px,153px);
+    .position(130px,170px);
+    span{
+      color:#bb514c;
+      font-size: 80px;
+      .position(110px,10px);
+    }
+    transform: translateX(200%);
+  }
+  &.active .title{
+    animation: left 1s forwards;
+  }
+  &.active .clock{
+    animation: scale-fade-big-in 1s 1s forwards;
+  }
+  .clock{
+    background: #fff;
+    opacity: 0;
+    .position(170px,380px);
+    border: solid 10px #bb514c;
+    padding: 4px;
+    border-radius: 50%;
+    &:after{
+      content:'';
+      display: block;
+      .bg(url('../../images/clock2.png'),157px,157px);
+    }
+    .clock-inner{
+      .position(50%,50%);
+      font-size: 38px;
+      transform: translate(-50%,-50%);
+      color:#0d3757;
+      width: 70px;
+      text-align: right;
+      font-weight: bold;
+    }
+    &.c-0{
+      &:before{
+        content:'';
+        display: block;
+        .position(-2px,-2px);
+        opacity: 0.6;
+        .bg(url('../../images/clock_chart_0.png'),168px,168px);
+        animation: scale-in 500ms;
+      }
+    }
+    &.c-1{
+      &:before{
+        content:'';
+        display: block;
+        .position(-2px,-2px);
+        opacity: 0.6;
+        animation: scale-in 500ms;
+        .bg(url('../../images/clock_chart_1.png'),168px,168px);
+      }
+    }
+  }
+  .clicker{
+    .bg(url('../../images/page_2_clicker.png'),100px,100px);
+    .position(210px,640px);
+    animation: scale-rotate-in 1s infinite ease-in-out;
+  }
+  .footer{
+    color:#fff;
+    .position(200px,740px);
+    line-height: 1.4;
+    text-align: center;
+    p:first-child{
+      font-size: 30px;
+    }
+  }
+  &:before{
+    content: '';
+    display: block;
+    .bg(url('../../images/page_2_bg.png'),532px,946px);
+    .position(0,0);
+  }
+}

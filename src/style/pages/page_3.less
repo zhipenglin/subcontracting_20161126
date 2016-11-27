@@ -1,0 +1,26 @@
+@import "../common";
+
+.page.page-3{
+  background: #0d3757;
+  .balloon{
+    width: 100%;
+    height: 620px;
+    .position(0,150px);
+    opacity: 0;
+    animation: fade-in 1000ms 300ms forwards;
+  }
+  &.active .title{
+    animation: left 2s forwards;
+  }
+  .title{
+    transform: translateX(200%);
+    .bg(url('../../images/page_3_title.png'),333px,82px);
+    .position(66px,40px);
+  }
+  &:before{
+    content:'';
+    display: block;
+    .position(0,0);
+    .bg(url('../../images/page_3_bg.png'),532px,946px)
+  }
+}
