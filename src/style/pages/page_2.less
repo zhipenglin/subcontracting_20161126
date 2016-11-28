@@ -31,6 +31,8 @@
       .bg(url('../../images/clock2.png'),157px,157px);
     }
     .clock-inner{
+      opacity: 0;
+      transition: opacity 1s 2s;
       .position(50%,50%);
       font-size: 38px;
       transform: translate(-50%,-50%);
@@ -59,7 +61,7 @@
     }
   }
   &.active{
-    .clicker,.footer{
+    .clicker,.footer,.clock-inner{
       opacity: 1;
     }
     .clock-du:before,.clock-du:after{
@@ -68,14 +70,14 @@
   }
   .clicker{
     opacity: 0;
-    transition: opacity 1s 4s;
+    transition: opacity 1s 5s;
     .bg(url('../../images/page_2_clicker.png'),100px,100px);
     .position(210px,640px);
     animation: scale-rotate-in 1s infinite ease-in-out;
   }
   .footer{
     opacity: 0;
-    transition: opacity 1s 4s;
+    transition: opacity 1s 5s;
     color:#fff;
     .position(200px,740px);
     line-height: 1.4;

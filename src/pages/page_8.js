@@ -11,8 +11,8 @@ export default function(){
         page.find('.red .slider .slider-inner').css('width',`${window.score/4}%`);
         page.find('.red .slider .num').text(`${Math.round(window.score/4)}%`);
 
-        page.find('.blue .slider .slider-inner').css('width',`${Math.floor(window.lastDayP*100)}%`);
-        page.find('.blue .slider .num').text(`${Math.floor(window.lastDayP*100)}%`);
+        page.find('.blue .slider .slider-inner').css('width',`${window.lastDayP}%`);
+        page.find('.blue .slider .num').text(`${window.lastDayP}%`);
 
         page.find('.result .time').text(window.lastDay);
         if(window.score/4<25){

@@ -7,9 +7,9 @@ import '../style/pages/page_2.less'
 export default function(){
     var page=loadPage(1);
     return new Promise((resolve)=>{
-        var current=99,currentP=0;
+        var current=99,currentP=60;
         var timer=setInterval(()=>{
-            if(current>window.lastDay){
+            if(current>=window.lastDay){
                 page.find('.title span').text(current);
                 current--;
             }else{
@@ -18,8 +18,8 @@ export default function(){
         },20);
         var timer2=setInterval(()=>{
             if(currentP<=window.lastDayP){
-                page.find('.clock-inner').text(`${Math.floor(currentP*100)}%`);
-                currentP+=0.01;
+                page.find('.clock-inner').text(`${currentP}%`);
+                currentP+=1;
             }else{
                 clearInterval(timer2);
             }

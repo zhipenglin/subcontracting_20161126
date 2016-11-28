@@ -37,7 +37,7 @@
         top: 0;
         height: 15px;
         width: 0;
-        transition: width 2s 3s;
+        transition: width 2s 2s;
       }
       .num{
         position: absolute;
@@ -48,7 +48,7 @@
     }
   }
   &.active{
-    .slider-list,.result,.footer,.logo,.footer .clicker{
+    .slider-list,.result,.footer,.footer .clicker{
       opacity:1;
     }
   }
@@ -59,7 +59,7 @@
     text-align: center;
     border-radius: 50%;
     opacity: 0;
-    transition: opacity 1s 3s;
+    transition: opacity 2s 3s;
     .position(110px,310px);
     .title{
       margin-top: 20px;
@@ -91,13 +91,14 @@
       margin: 20px auto;
       border-radius: 1em;
     }
-    p{
-      color:#ec5a49;
-    }
+  }
+  .des-info{
+    width: 240px;
+    text-align: center;
+    .position(146px,740px);
+    color:#ec5a49;
   }
   .logo{
-    opacity: 0;
-    transition: opacity 1s 1s;
     .position(0,780px);
     &:before{
       content: '';

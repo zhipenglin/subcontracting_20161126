@@ -10,7 +10,7 @@ export default function(canvas,tags,colors){
         bounce = -0.8;
     for (var radius, ball, i = 0; i < numBalls; i++) {
         var text=tags[i];
-        radius = Math.random() * text.length*2 + text.length*3+40;
+        radius = Math.random() * text.length*2 + text.length*3+45;
         ball = new Ball(radius, colors[Math.floor(Math.random()*(colors.length-1))]);
         ball.lineWidth=0;
         ball.mass = radius;
