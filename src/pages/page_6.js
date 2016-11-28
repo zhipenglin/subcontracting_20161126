@@ -3,7 +3,6 @@
  */
 import loadPage from '../util/loadPage'
 import '../style/pages/page_6.less'
-import balloon from '../components/balloon'
 import rangesliderJs from 'rangeslider-js'
 
 export default function(){

@@ -22,7 +22,7 @@ Ball.prototype.draw = function (context) {
     context.scale(this.scaleX, this.scaleY);
 
     context.lineWidth = this.lineWidth;
-    context.fillStyle = utils.colorToRGB(this.color,0.7);
+    context.fillStyle = utils.colorToRGB(this.color,0.8);
     context.opacity=0.8;
     context.beginPath();
     //x, y, radius, start_angle, end_angle, anti-clockwise

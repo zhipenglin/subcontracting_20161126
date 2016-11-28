@@ -11,15 +11,15 @@ export default function(canvas,tags,colors){
     var size=$('html').css('fontSize').match(/\d{1,}/)[0]*2-20;
     for (var radius, ball, i = 0; i < numBalls; i++) {
         var text=tags[i];
-        radius = Math.random() * text.length*2 + text.length*3+size;
+        radius = Math.random() * text.length*2 + text.length*4+size;
         ball = new Ball(radius, colors[Math.floor(Math.random()*(colors.length-1))]);
         ball.lineWidth=0;
         ball.mass = radius;
         ball.x = Math.random() * canvas.width;
         ball.y = Math.random() * canvas.height;
         ball.text=text;
-        ball.vx = Math.random() * 8 - 4;
-        ball.vy = Math.random() * 8 - 4;
+        ball.vx = Math.random() * 4 - 2;
+        ball.vy = Math.random() * 4 - 2;
         balls.push(ball);
     }
     function rotate (x, y, sin, cos, reverse) {
@@ -33,7 +33,7 @@ export default function(canvas,tags,colors){
             dy = ball1.y - ball0.y,
             dist = Math.sqrt(dx * dx + dy * dy);
         //collision handling code here
-        if (dist < ball0.radius + ball1.radius) {
+        if (dist < ball0.radius*0.8 + ball1.radius*0.8) {
             //calculate angle, sine, and cosine
             var angle = Math.atan2(dy, dx),
                 sin = Math.sin(angle),
@@ -48,12 +48,12 @@ export default function(canvas,tags,colors){
                 vel1 = rotate(ball1.vx, ball1.vy, sin, cos, true),
             //collision reaction
                 vxTotal = vel0.x - vel1.x;
-            vel0.x = ((ball0.mass - ball1.mass) * vel0.x + 2 * ball1.mass * vel1.x) /
-                (ball0.mass + ball1.mass);
+            vel0.x = ((ball0.mass*0.8 - ball1.mass*0.8) * vel0.x + 2 * ball1.mass*0.8 * vel1.x) /
+                (ball0.mass*0.8 + ball1.mass*0.8);
             vel1.x = vxTotal + vel0.x;
             //update position - to avoid objects becoming stuck together
             var absV = Math.abs(vel0.x) + Math.abs(vel1.x),
-                overlap = (ball0.radius + ball1.radius) - Math.abs(pos0.x - pos1.x);
+                overlap = (ball0.radius*0.8 + ball1.radius*0.8) - Math.abs(pos0.x - pos1.x);
             pos0.x += vel0.x / absV * overlap;
             pos1.x += vel1.x / absV * overlap;
             //rotate positions back
