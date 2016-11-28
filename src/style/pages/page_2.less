@@ -39,33 +39,27 @@
       text-align: right;
       font-weight: bold;
     }
-    &:before{
-      opacity: 0;
-      transition: opacity 1s;
-    }
-    &.c-0{
+    .clock-du{
       &:before{
         content:'';
         display: block;
         .position(-2px,-2px);
-        opacity: 0.6;
+        opacity: 0;
+        transition: opacity 1s 2s;
         .bg(url('../../images/clock_chart_0.png'),168px,168px);
-        animation: scale-in 500ms;
       }
-    }
-    &.c-1{
-      &:before{
+      &:after{
         content:'';
         display: block;
         .position(-2px,-2px);
-        opacity: 0.6;
-        animation: scale-in 500ms;
+        opacity: 0;
+        transition: opacity 1s 3s;
         .bg(url('../../images/clock_chart_1.png'),168px,168px);
       }
     }
   }
   &.active{
-    .clicker,.footer{
+    .clicker,.footer,.clock-du:before,.clock-du:after{
       opacity: 1;
     }
   }

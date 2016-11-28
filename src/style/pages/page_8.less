@@ -47,11 +47,10 @@
       }
     }
   }
-  &.active .slider-list{
-    opacity: 1;
-  }
-  &.active .result{
-    opacity: 1;
+  &.active{
+    .slider-list,.result,.footer,.logo,.footer .clicker{
+      opacity:1;
+    }
   }
   .result{
     width: 320px;
@@ -83,6 +82,8 @@
     width: 240px;
     text-align: center;
     .clicker{
+      opacity: 0;
+      transition: opacity 1s 4s;
       background: #ec5a49;
       width: 120px;
       height: 40px;
@@ -92,11 +93,6 @@
     }
     p{
       color:#ec5a49;
-    }
-  }
-  &.active{
-    .footer,.logo{
-      opacity:1;
     }
   }
   .logo{
