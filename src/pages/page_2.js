@@ -15,7 +15,7 @@ export default function(){
             }else{
                 clearInterval(timer);
             }
-        },50);
+        },20);
         var timer2=setInterval(()=>{
             if(currentP<=window.lastDayP){
                 page.find('.clock-inner').text(`${Math.floor(currentP*100)}%`);
@@ -23,7 +23,7 @@ export default function(){
             }else{
                 clearInterval(timer2);
             }
-        },50);
+        },20);
         page.find('.clicker').click(()=>{
             resolve();
         });
