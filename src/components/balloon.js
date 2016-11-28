@@ -8,9 +8,10 @@ export default function(canvas,tags,colors){
         balls = [],
         numBalls = tags.length,
         bounce = -0.8;
+    var size=$('html').css('fontSize').match(/\d{1,}/)[0]*2-20;
     for (var radius, ball, i = 0; i < numBalls; i++) {
         var text=tags[i];
-        radius = Math.random() * text.length*2 + text.length*3+45;
+        radius = Math.random() * text.length*2 + text.length*3+size;
         ball = new Ball(radius, colors[Math.floor(Math.random()*(colors.length-1))]);
         ball.lineWidth=0;
         ball.mass = radius;

@@ -40,6 +40,8 @@
         transition: width 2s 2s;
       }
       .num{
+        opacity:0;
+        transition: opacity 500ms 4s;
         position: absolute;
         right: -60px;
         font-size: 28px;
@@ -48,7 +50,7 @@
     }
   }
   &.active{
-    .slider-list,.result,.footer,.footer .clicker{
+    .slider-list,.result,.footer,.footer .clicker,.slider .num{
       opacity:1;
     }
   }

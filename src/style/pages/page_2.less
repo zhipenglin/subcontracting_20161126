@@ -55,7 +55,7 @@
         display: block;
         .position(-2px,-2px);
         opacity: 0;
-        transition: opacity 1s 3s;
+        transition: opacity 1s;
         .bg(url('../../images/clock_chart_1.png'),168px,168px);
       }
     }
@@ -64,7 +64,7 @@
     .clicker,.footer,.clock-inner{
       opacity: 1;
     }
-    .clock-du:before,.clock-du:after{
+    .clock-du:before,.clock-du.active:after{
       opacity: 0.6;
     }
   }
